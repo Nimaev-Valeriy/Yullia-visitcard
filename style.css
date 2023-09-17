@@ -1,0 +1,218 @@
+*,
+::before,
+::after {
+  box-sizing: border-box;
+}
+@font-face{
+  font-family: "Dancing";
+  src:
+  url("./fonts/DancingScript-Medium.woff2") format("woff2"),
+  url("./fonts/DancingScript-Medium.ttf") format("ttf");
+  font-weight: 400;
+  
+}
+body {
+  margin: 0;
+  font-family: "Dancing";
+}
+
+img {
+  width: 100%;
+  height: 100%;
+}
+
+h1,
+h2,
+h3 {
+  margin: 0;
+}
+
+
+.header {
+  width: 100%;
+  height: 30vh;
+  padding: 15px 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 90px;
+  letter-spacing: 10px;
+  color: orange;
+  text-shadow: 5px 5px 5px red;
+  background-image:linear-gradient(180deg, purple,rgb(247, 144, 161));
+}
+
+.Yullya {
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: linear-gradient(-45deg, purple, rgb(251, 48, 251), rgb(255, 136, 156), pink);
+  background-size: 400% 400%;
+  animation: gradient 15s ease infinite;
+}
+@keyframes gradient {
+  0% {
+      background-position: 0% 50%;
+  }
+  50% {
+      background-position: 100% 50%;
+  }
+  100% {
+      background-position: 0% 50%;
+  }
+}
+
+.container {
+  max-width: 1230px;
+  width: 100%;
+  margin: 0 auto;
+  padding: 0 15px;
+}
+
+.Yullya__container {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax( 290px,1fr));
+  grid-gap: 20px;
+}
+
+
+.content {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+
+}
+
+.content__title {
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  font-size: 48px;
+  line-height: 1.1;
+  margin-bottom: 20px;
+  color: orange;
+  text-shadow: 4px 1px coral;
+}
+
+.hero__prof {
+  color: #4facfe;
+  white-space: nowrap;
+}
+
+.content__name {
+  font-family: "Dancing";
+  font-size: 35px;
+  font-weight: 600;
+  text-shadow: 0 0 4px red;
+}
+.content__text{
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  font-size: 18px;
+  font-style: italic;
+  color: orange;
+  text-shadow: 0 2px 2px red;
+}
+
+.contacts {
+  display: flex;
+}
+
+.contacts__link {
+  margin-right: 10px;
+  font-size: 30px;
+  color: #000;
+}
+
+
+
+.icon{
+  height: 30px;
+  width: 30px;
+}
+.picture {
+  max-width: 500px;
+  justify-self: center;
+  overflow: hidden;
+  border: 3px solid #ef1a1a;
+
+  background-image: linear-gradient(to right, #4facfe 0%, #00f2fe 100%);
+
+  animation: ava-animate 5s infinite alternate;
+  box-shadow: 2px 5px 10px rgba(0, 0, 0, .5);
+}
+
+.picture-img {
+  animation: ava-bg 3s infinite alternate;
+}
+
+@media screen and (max-width: 978px) {
+  .header{
+    font-size: 50px;
+  }
+  .Yullya {
+    padding-top: 30px;
+  }
+
+  .Yullya__container {
+    grid-row-gap: 20px;
+  }
+
+  .content__title {
+    font-size: 28px;
+    margin-bottom: 10px;
+  }
+
+  .content__name {
+    font-size: 22px;
+    font-weight: 400;
+  }
+
+  .content__text {
+    font-size: 14px;
+  }
+
+  .content {
+    text-align: center;
+  }
+
+  .contacts {
+    justify-content: center;
+  }
+
+  .picture {
+    max-width: 350px;
+    justify-self: center;
+  }
+  .icon{
+    width: 15px;
+    height: 15px;
+  }
+}
+
+
+
+@keyframes ava-animate{
+  0%{
+      border-radius: 12% 88% 10% 90% / 59% 43% 57% 41% ;
+  }
+ 
+  40%{
+      border-radius: 70% 30% 29% 71% / 66% 48% 52% 34% ;
+  }
+  60%{
+      border-radius: 72% 28% 65% 35% / 44% 42% 58% 56% ;
+  }
+  
+  100%{
+      border-radius: 0% 100% 0% 100% / 42% 36% 64% 58% ;
+  }
+}
+
+@keyframes ava-bg {
+  from {
+    backdrop-filter: hue-rotate(0);
+  }
+
+  to {
+    backdrop-filter: hue-rotate(90deg);
+  }
+}
